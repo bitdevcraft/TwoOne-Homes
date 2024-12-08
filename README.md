@@ -4,18 +4,15 @@
 
 ## About The Project
 
-Customer Relationship Management
+This is inventory/property management where users can sell, rent or lease their properties.
+
 
 ### My application's features:
 
-##### Lead Management
-
-- [ ] Follow Up
-- [ ] Lead Conversion
-  - [ ] Account
-  - [ ] Contact
-  - [ ] Opportunity
-- [ ] Lead Assignment
+- [ ] Account Management
+- [ ] Property Management
+- [ ] Booking System
+- [ ] Commission System
 
 ##### Task Management
 
@@ -32,6 +29,8 @@ Customer Relationship Management
 - [ ] Control user roles
 - [ ] Control user permission
 - [ ] Add User
+- [ ] Approve External User Account Application
+- [ ] Create Accounts
 - [ ] Helps to manage tasks
 - [ ] Monitor the metrics
 - [ ] Use of admin panel
@@ -39,6 +38,7 @@ Customer Relationship Management
 ## Built With
 
 [![Static Badge][Dotnet-badge]][Dotnet-Url]
+[![Static Badge][PostgreSQL-badge]][PostgreSQL-Url]
 [![Static Badge][Redis-badge]][Redis-Url]
 [![Static Badge][Angular-badge]][Angular-Url]
 [![Static Badge][PrimeNG-badge]][PrimeNG-Url]
@@ -53,15 +53,17 @@ Customer Relationship Management
 [Dotnet-Url]: https://dotnet.microsoft.com/en-us/
 [Redis-badge]: https://img.shields.io/badge/Redis-%23FF4438?style=for-the-badge&logo=redis&logoColor=white
 [Redis-Url]: https://redis.io/
+[PostgreSQL-badge]: https://img.shields.io/badge/PostgreSQL-%234169E1?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-Url]: https://www.postgresql.org/
 [Angular-badge]: https://img.shields.io/badge/Angular-%230F0F11?style=for-the-badge&logo=angular&logoColor=white
 [Angular-Url]: https://angular.dev/
 [PrimeNG-badge]: https://img.shields.io/badge/PrimeNG-%23DD0031?style=for-the-badge&logo=primeng&logoColor=white
-[PrimeNG-Url]: https://angular.dev/
+[PrimeNG-Url]: https://primeng.org/
 [RxJS-badge]: https://img.shields.io/badge/RxJS-%23B7178C?style=for-the-badge&logo=reactivex&logoColor=white
-[RxJS-Url]: https://angular.dev/
+[RxJS-Url]: https://rxjs.dev/
 [Typescript-badge]: https://img.shields.io/badge/Typescript-%233178C6?style=for-the-badge&logo=typescript&logoColor=white
-[Typescript-Url]: https://angular.dev/
+[Typescript-Url]: https://www.typescriptlang.org/
 [Podman-badge]: https://img.shields.io/badge/Podman-%23892CA0?style=for-the-badge&logo=podman&logoColor=white
-[Podman-Url]: https://angular.dev/
+[Podman-Url]: https://podman.io/
 [Docker-badge]: https://img.shields.io/badge/Docker-%232496ED?style=for-the-badge&logo=docker&logoColor=white
-[Docker-Url]: https://angular.dev/
+[Docker-Url]: https://www.docker.com/
