@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Identity;
+using TwoOneHomes.Domain.Entities.Accounts;
 
 namespace TwoOneHomes.Domain.Users;
 
@@ -18,6 +21,9 @@ public class User : IdentityUser<Ulid>
     public Ulid? ManagerId { get; set; }
     public ICollection<User>? Members { get; set; }
 
+    public string FullName => 
+        Regex.Replace($"{Salutation} {FirstName} {LastName} {Suffix}".Trim(), 
+            @"\s+", " ");
 
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
@@ -29,4 +35,8 @@ public class User : IdentityUser<Ulid>
     public string? Fax { get; set; }
     public string? Title { get; set; }
     public bool Active { get; set; } = true;
+
+    // Relationship
+    public Account? Account { get; set; }
+    public Ulid? AccountId { get; set; }
 }
