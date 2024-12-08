@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\server\TwoOneHomes.App\TwoOneHomes.App.csproj"/>
+        <ProjectReference Include="..\TwoOneHomes.App\TwoOneHomes.App.csproj"/>
     </ItemGroup>
     
 </Project>
