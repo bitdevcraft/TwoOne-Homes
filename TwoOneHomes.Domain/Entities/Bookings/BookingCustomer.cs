@@ -1,4 +1,3 @@
-using TwoOneHomes.Domain.Entities.Accounts;
 using TwoOneHomes.Domain.Primitives;
 using TwoOneHomes.Domain.Users;
 

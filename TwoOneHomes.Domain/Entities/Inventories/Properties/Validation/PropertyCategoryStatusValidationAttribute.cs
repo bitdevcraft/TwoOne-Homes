@@ -40,7 +40,7 @@ public sealed class PropertyCategoryStatusValidationAttribute : ValidationAttrib
         {
             PropertyCategory.Selling => true, // All statuses are valid for Selling
             PropertyCategory.Leasing => true, // All statuses are valid for Leasing
-            PropertyCategory.Rental => status == PropertyStatus.Available || status == PropertyStatus.Unavailable,
+            PropertyCategory.Rental => status is PropertyStatus.Available or PropertyStatus.Unavailable,
             _ => false
         };
 

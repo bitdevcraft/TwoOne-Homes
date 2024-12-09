@@ -41,25 +41,25 @@ public class Property : BaseProperty
    
     private double? _areaSqFt; // Backing field for square feet
     private double? _areaSqM;  // Backing field for square meters
-    private const double ConversionFactor = 10.7639; // Conversion factor: 1 square meter = 10.7639 square feet
+    private const double _conversionFactor = 10.7639; // Conversion factor: 1 square meter = 10.7639 square feet
 
     public double? AreaSqFt
     {
-        get => _areaSqFt ?? (_areaSqM.HasValue ? _areaSqM * ConversionFactor : null);
+        get => _areaSqFt ?? (_areaSqM.HasValue ? _areaSqM * _conversionFactor : null);
         set
         {
             _areaSqFt = value;
-            _areaSqM = value.HasValue ? value / ConversionFactor : null;
+            _areaSqM = value.HasValue ? value / _conversionFactor : null;
         }
     }
 
     public double? AreaSqM
     {
-        get => _areaSqM ?? (_areaSqFt.HasValue ? _areaSqFt / ConversionFactor : null);
+        get => _areaSqM ?? (_areaSqFt.HasValue ? _areaSqFt / _conversionFactor : null);
         set
         {
             _areaSqM = value;
-            _areaSqFt = value.HasValue ? value * ConversionFactor : null;
+            _areaSqFt = value.HasValue ? value * _conversionFactor : null;
         }
     }
     

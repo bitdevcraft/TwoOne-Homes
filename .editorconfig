@@ -1,7 +1,7 @@
 # Remove the line below if you want to inherit .editorconfig settings from higher directories
 root = true
 
-[*/Migrations/*.cs]
+[*/Migrations/**/*.cs]
 
 all = none
 the = none
@@ -310,6 +310,10 @@ dotnet_diagnostic.CS1591.severity = none
 # IDE0058: Expression value is never used
 dotnet_diagnostic.IDE0058.severity = suggestion
 
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = suggestion
+
+
 # Visual Studio.Analyzers
 
 # IDE0046: Convert to conditional expression
@@ -339,3 +343,7 @@ dotnet_style_prefer_inferred_anonymous_type_member_names = true:error
 dotnet_style_prefer_compound_assignment = true:error
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 dotnet_diagnostic.CA2227.severity = none
+
+
+dotnet_diagnostic.ide0055.severity = none
+

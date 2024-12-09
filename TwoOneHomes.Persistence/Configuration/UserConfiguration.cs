@@ -2,6 +2,7 @@
 using TwoOneHomes.Persistence.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TwoOneHomes.Domain.Entities.Accounts;
 
 namespace TwoOneHomes.Persistence.Configuration;
 
@@ -26,6 +27,10 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(e => e.User)
             .HasForeignKey(ur => ur.UserId)
             .IsRequired();
+
+        builder.HasOne(e => e.Account)
+            .WithMany(e => e.Employees)
+            .HasForeignKey(e => e.AccountId);
 
         // Self-Referencing
         builder.HasOne(x => x.Manager)

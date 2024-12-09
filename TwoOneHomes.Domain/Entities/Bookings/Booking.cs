@@ -1,9 +1,7 @@
 using TwoOneHomes.Domain.Entities.Accounts;
-using TwoOneHomes.Domain.Entities.Inventories;
 using TwoOneHomes.Domain.Entities.Inventories.Properties;
 using TwoOneHomes.Domain.Entities.Inventories.Properties.Enums;
 using TwoOneHomes.Domain.Primitives;
-using TwoOneHomes.Domain.Users;
 
 namespace TwoOneHomes.Domain.Entities.Bookings;
 

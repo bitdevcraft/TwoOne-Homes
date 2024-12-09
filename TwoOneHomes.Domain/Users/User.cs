@@ -1,5 +1,4 @@
-﻿using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Identity;
 using TwoOneHomes.Domain.Entities.Accounts;
 
