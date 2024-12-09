@@ -1,6 +1,6 @@
 using TwoOneHomes.Application.Users.Login;
-using TwoOneHomes.Domain.Shared;
 using MediatR;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Users.ValidateRefreshToken;
 

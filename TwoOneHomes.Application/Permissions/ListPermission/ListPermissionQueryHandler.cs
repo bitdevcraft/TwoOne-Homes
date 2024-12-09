@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using TwoOneHomes.Application.Abstraction.Messaging;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Permissions.ListPermission;
 

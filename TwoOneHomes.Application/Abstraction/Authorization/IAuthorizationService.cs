@@ -1,4 +1,4 @@
-﻿using TwoOneHomes.Domain.Shared;
+﻿using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Abstraction.Authorization;
 

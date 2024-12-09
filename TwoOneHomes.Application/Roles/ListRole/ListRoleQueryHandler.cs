@@ -1,8 +1,8 @@
 ﻿using TwoOneHomes.Application.Abstraction.Messaging;
-using TwoOneHomes.Domain.Shared;
-using TwoOneHomes.Domain.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Users.Roles;
 
 namespace TwoOneHomes.Application.Roles.ListRole;
 

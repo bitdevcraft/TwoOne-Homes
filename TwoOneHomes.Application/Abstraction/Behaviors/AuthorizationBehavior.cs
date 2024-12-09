@@ -1,7 +1,8 @@
 ﻿using System.Reflection;
 using TwoOneHomes.Application.Abstraction.Authorization;
-using TwoOneHomes.Domain.Shared;
 using MediatR;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Abstraction.Behaviors;
 
@@ -56,13 +57,13 @@ public class AuthorizationBehavior<TRequest, TResponse>(IAuthorizationService au
     {
         if (typeof(TResult) == typeof(Result))
         {
-            return (Domain.Shared.Result.Failure(Error.Unauthorized()) as TResult)!;
+            return (Result.Failure(Error.Unauthorized()) as TResult)!;
         }
 
         object validationResult = typeof(Result<>)
             .GetGenericTypeDefinition()
             .MakeGenericType(typeof(TResult).GenericTypeArguments[0])
-            .GetMethod(nameof(Domain.Shared.Result.Failure))!
+            .GetMethod(nameof(Result.Failure))!
             .Invoke(null, [Error.Unauthorized()])!;
 
         return (TResult)validationResult;

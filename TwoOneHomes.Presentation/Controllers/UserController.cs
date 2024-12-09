@@ -1,10 +1,10 @@
 using TwoOneHomes.Application.Users;
 using TwoOneHomes.Application.Users.CreateUser;
 using TwoOneHomes.Application.Users.ListUser;
-using TwoOneHomes.Domain.Shared;
 using TwoOneHomes.Presentation.Abstraction;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Presentation.Controllers;
 

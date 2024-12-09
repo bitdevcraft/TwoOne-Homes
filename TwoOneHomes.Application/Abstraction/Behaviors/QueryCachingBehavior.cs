@@ -1,7 +1,7 @@
 ﻿using TwoOneHomes.Application.Abstraction.Caching;
-using TwoOneHomes.Domain.Shared;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Abstraction.Behaviors;
 

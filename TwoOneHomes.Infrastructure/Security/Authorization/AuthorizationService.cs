@@ -2,8 +2,9 @@
 using TwoOneHomes.Application.Abstraction.Caching;
 using TwoOneHomes.Application.Abstraction.UserAccess;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
-using TwoOneHomes.Domain.Users;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Users.Roles;
 using TwoOneHomes.Persistence;
 
 namespace TwoOneHomes.Infrastructure.Security.Authorization;

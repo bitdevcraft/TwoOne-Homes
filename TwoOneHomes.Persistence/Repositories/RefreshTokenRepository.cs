@@ -1,6 +1,7 @@
 using TwoOneHomes.Domain.Repositories;
 using TwoOneHomes.Domain.Users;
 using Microsoft.EntityFrameworkCore;
+using TwoOneHomes.Domain.Users.Tokens;
 
 namespace TwoOneHomes.Persistence.Repositories;
 

@@ -3,6 +3,7 @@ using TwoOneHomes.Domain.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using TwoOneHomes.Domain.Users.Roles;
 
 namespace TwoOneHomes.Persistence.Seed;
 

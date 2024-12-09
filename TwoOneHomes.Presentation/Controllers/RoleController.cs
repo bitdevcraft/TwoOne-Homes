@@ -4,11 +4,11 @@ using TwoOneHomes.Application.Roles.CreateRole;
 using TwoOneHomes.Application.Roles.DeleteRole;
 using TwoOneHomes.Application.Roles.GetRolePermission;
 using TwoOneHomes.Application.Roles.ListRole;
-using TwoOneHomes.Domain.Shared;
 using TwoOneHomes.Presentation.Abstraction;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Presentation.Controllers;
 

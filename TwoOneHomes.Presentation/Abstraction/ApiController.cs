@@ -1,7 +1,9 @@
-﻿using TwoOneHomes.Domain.Shared;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Shared.Vaildations;
 
 namespace TwoOneHomes.Presentation.Abstraction;
 

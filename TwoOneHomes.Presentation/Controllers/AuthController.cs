@@ -7,6 +7,7 @@ using TwoOneHomes.Presentation.Abstraction;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Presentation.Controllers;
 
@@ -16,7 +17,7 @@ public class AuthController(ISender sender) : ApiController(sender)
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
         var query = new RegisterCommand(request.Email, request.Username, request.Password);
-        Domain.Shared.Result<Unit> result = await _sender.Send(query);
+        Result<Unit> result = await _sender.Send(query);
 
         return result.IsFailure ? HandleFailure(result) : Ok();
     }
@@ -25,7 +26,7 @@ public class AuthController(ISender sender) : ApiController(sender)
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
         var query = new LoginCommand(request.Username, request.Password);
-        Domain.Shared.Result<LoginResponse> result = await _sender.Send(query);
+        Result<LoginResponse> result = await _sender.Send(query);
 
         SetRefreshToken(result.Value);
 
@@ -36,7 +37,7 @@ public class AuthController(ISender sender) : ApiController(sender)
     public async Task<IActionResult> Log([FromBody] LogActivityRequest request)
     {
         var query = new LogActivityCommand(request.IpAddress, request.DeviceInfo, UserActivityTypes.Login);
-        Domain.Shared.Result<Unit> result = await _sender.Send(query);
+        Result<Unit> result = await _sender.Send(query);
 
         return result.IsFailure ? HandleFailure(result) : Ok(result.Value);
     }
@@ -52,7 +53,7 @@ public class AuthController(ISender sender) : ApiController(sender)
         }
 
         var query = new RefreshTokenCommand(refreshToken);
-        Domain.Shared.Result<LoginResponse> result = await _sender.Send(query);
+        Result<LoginResponse> result = await _sender.Send(query);
 
         SetRefreshToken(result.Value);
 

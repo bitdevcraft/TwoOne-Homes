@@ -1,5 +1,6 @@
 using TwoOneHomes.Domain.Repositories;
 using TwoOneHomes.Domain.Users;
+using TwoOneHomes.Domain.Users.Activities;
 
 namespace TwoOneHomes.Persistence.Repositories;
 

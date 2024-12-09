@@ -1,7 +1,7 @@
-﻿using TwoOneHomes.Domain.Shared;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.Logging;
 using Serilog.Context;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Abstraction.Behaviors;
 

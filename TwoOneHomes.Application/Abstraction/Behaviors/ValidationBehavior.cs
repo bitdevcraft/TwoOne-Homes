@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
-using TwoOneHomes.Domain.Shared;
 using MediatR;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Shared.Vaildations;
 using ValidationResult = FluentValidation.Results.ValidationResult;
 
 namespace TwoOneHomes.Application.Abstraction.Behaviors;
@@ -42,13 +44,13 @@ public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest>? valid
     {
         if (typeof(TResult) == typeof(Result))
         {
-            return (Domain.Shared.ValidationResult.WithErrors(errors) as TResult)!;
+            return (Domain.Shared.Vaildations.ValidationResult.WithErrors(errors) as TResult)!;
         }
 
         object validationResult = typeof(ValidationResult<>)
             .GetGenericTypeDefinition()
             .MakeGenericType(typeof(TResult).GenericTypeArguments[0])
-            .GetMethod(nameof(Domain.Shared.ValidationResult.WithErrors))!
+            .GetMethod(nameof(Domain.Shared.Vaildations.ValidationResult.WithErrors))!
             .Invoke(null, [errors])!;
 
         return (TResult)validationResult;

@@ -3,10 +3,10 @@ using TwoOneHomes.Application.AppMenus.DeleteNgMenu;
 using TwoOneHomes.Application.AppMenus.GetNgMenu;
 using TwoOneHomes.Application.AppMenus.GetNgMenuTree;
 using TwoOneHomes.Domain.ClientAppLayout;
-using TwoOneHomes.Domain.Shared;
 using TwoOneHomes.Presentation.Abstraction;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Presentation.Controllers;
 

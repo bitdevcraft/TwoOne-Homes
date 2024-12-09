@@ -1,5 +1,5 @@
-﻿using TwoOneHomes.Domain.Shared;
-using MediatR;
+﻿using MediatR;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Users.Login;
 

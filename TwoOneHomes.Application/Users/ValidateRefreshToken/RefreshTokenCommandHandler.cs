@@ -1,10 +1,12 @@
 using TwoOneHomes.Application.Abstraction.Authentication;
 using TwoOneHomes.Application.Users.Login;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
 using TwoOneHomes.Domain.Users;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Users.Tokens;
 
 namespace TwoOneHomes.Application.Users.ValidateRefreshToken;
 

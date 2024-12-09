@@ -1,8 +1,9 @@
-﻿using TwoOneHomes.Domain.Shared;
-using TwoOneHomes.Domain.Users;
+﻿using TwoOneHomes.Domain.Users;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Users.Register;
 

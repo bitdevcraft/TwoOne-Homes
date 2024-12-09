@@ -1,7 +1,8 @@
 ﻿using TwoOneHomes.Application.Abstraction.Messaging;
 using TwoOneHomes.Domain.Entities;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
 
 namespace TwoOneHomes.Application.Contacts.GetContactById;
 

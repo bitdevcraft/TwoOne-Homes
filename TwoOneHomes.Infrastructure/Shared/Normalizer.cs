@@ -1,4 +1,4 @@
-﻿using TwoOneHomes.Domain.Shared;
+﻿using TwoOneHomes.Domain.Shared.Formatters;
 
 namespace TwoOneHomes.Infrastructure.Shared;
 

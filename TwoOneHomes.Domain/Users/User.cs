@@ -1,6 +1,9 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Identity;
 using TwoOneHomes.Domain.Entities.Accounts;
+using TwoOneHomes.Domain.Users.Activities;
+using TwoOneHomes.Domain.Users.Roles;
+using TwoOneHomes.Domain.Users.Tokens;
 
 namespace TwoOneHomes.Domain.Users;
 

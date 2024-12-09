@@ -1,7 +1,7 @@
 using AutoMapper;
 using TwoOneHomes.Application.Abstraction.Messaging;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
+using TwoOneHomes.Domain.Shared.Results;
 using TwoOneHomes.Domain.Users;
 
 namespace TwoOneHomes.Application.Users.ListUser;

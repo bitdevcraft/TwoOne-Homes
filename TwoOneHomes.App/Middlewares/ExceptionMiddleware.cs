@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
-using TwoOneHomes.Domain.Shared;
+using TwoOneHomes.Domain.Shared.Errors;
 
 namespace TwoOneHomes.App.Middlewares;
 

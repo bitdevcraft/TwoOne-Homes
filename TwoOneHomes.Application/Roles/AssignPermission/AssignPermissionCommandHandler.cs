@@ -1,8 +1,9 @@
 ﻿using TwoOneHomes.Application.Abstraction.Messaging;
 using TwoOneHomes.Domain.Repositories;
-using TwoOneHomes.Domain.Shared;
-using TwoOneHomes.Domain.Users;
 using Microsoft.AspNetCore.Identity;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Users.Roles;
 
 namespace TwoOneHomes.Application.Roles.AssignPermission;
 

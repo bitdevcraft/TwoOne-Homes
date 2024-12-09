@@ -1,8 +1,10 @@
 ﻿using TwoOneHomes.Application.Abstraction.Authentication;
-using TwoOneHomes.Domain.Shared;
 using TwoOneHomes.Domain.Users;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using TwoOneHomes.Domain.Shared.Errors;
+using TwoOneHomes.Domain.Shared.Results;
+using TwoOneHomes.Domain.Users.Tokens;
 
 namespace TwoOneHomes.Application.Users.Login;
 
@@ -40,7 +42,7 @@ public class LoginCommandHandler(
         string refreshToken = _refreshTokenProvider.GenerateRefreshToken();
         string token = _jwtProvider.Generate(user, roles);
 
-        user.RefreshTokens.Add(new Domain.Users.RefreshToken { User = user, Token = refreshToken });
+        user.RefreshTokens.Add(new RefreshToken { User = user, Token = refreshToken });
 
         await _userManager.UpdateAsync(user);
 

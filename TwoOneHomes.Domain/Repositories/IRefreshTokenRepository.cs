@@ -1,4 +1,4 @@
-using TwoOneHomes.Domain.Users;
+using TwoOneHomes.Domain.Users.Tokens;
 
 namespace TwoOneHomes.Domain.Repositories;
 

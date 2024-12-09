@@ -1,3 +1,4 @@
+using TwoOneHomes.Domain.Entities.Accounts.Enums;
 using TwoOneHomes.Domain.Entities.Inventories.Properties;
 using TwoOneHomes.Domain.Primitives;
 using TwoOneHomes.Domain.Users;
@@ -13,6 +14,8 @@ public class Account : Entity, IAuditableEntity
     public string? Name { get; set; }
 
     public AccountType Type { get; set; }
+    public AccountStatus Status { get; set; }
+    
     public bool IsActive { get; set; }
 
     // Collection
