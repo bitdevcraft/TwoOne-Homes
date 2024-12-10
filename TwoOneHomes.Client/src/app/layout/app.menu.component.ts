@@ -271,12 +271,14 @@ export class AppMenuComponent implements OnInit {
       },
     ];
 
-    this.model.push({
+    const dashboard = {
       label: 'Home',
       items: [
         { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] },
       ],
-    });
+    }
+
+
 
     this.authService.isLoggedIn$
       .pipe(
@@ -291,7 +293,7 @@ export class AppMenuComponent implements OnInit {
       )
       .subscribe((data) => {
         if (data) {
-          this.model.splice(1, 0, ...data);
+          this.model = [ dashboard, ...data ];
         }
       });
   }
