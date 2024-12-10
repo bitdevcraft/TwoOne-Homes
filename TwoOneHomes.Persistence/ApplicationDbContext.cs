@@ -3,6 +3,7 @@ using TwoOneHomes.Persistence.UlidProperty;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TwoOneHomes.Domain.Entities.Inventories.Properties;
 using TwoOneHomes.Domain.Users.Roles;
 
 namespace TwoOneHomes.Persistence;
@@ -25,7 +26,6 @@ public sealed class ApplicationDbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
         builder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
     }
 

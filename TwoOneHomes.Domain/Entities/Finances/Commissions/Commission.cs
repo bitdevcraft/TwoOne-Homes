@@ -8,6 +8,11 @@ namespace TwoOneHomes.Domain.Entities.Finances.Commissions;
 public class Commission : Entity, IAuditableEntity
 {
     private decimal _amount;
+
+    public Commission()
+    {
+        
+    }
     public Commission(Booking booking, Account broker)
     {
         Booking = booking;
@@ -23,7 +28,7 @@ public class Commission : Entity, IAuditableEntity
     {
         get
         {
-            if (Percentage > 0)
+            if (Percentage > 0 && Booking != null)
             {
                 _amount = Booking.SalesPrice * Percentage / 100;
                 return _amount;
@@ -37,10 +42,10 @@ public class Commission : Entity, IAuditableEntity
     public CommissionStatus Status { get; set; }
     
     // Relationship
-    public Booking Booking { get; set; }
+    public Booking? Booking { get; set; }
     public Ulid BookingId { get; set; }
 
-    public Account Broker { get; set; }
+    public Account? Broker { get; set; }
     public Ulid BrokerId { get; set; }
     
 }

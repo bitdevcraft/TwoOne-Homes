@@ -6,6 +6,10 @@ namespace TwoOneHomes.Domain.Entities.Inventories.Projects;
 
 public class Project : Entity, IAuditableEntity, IAccountOwned
 {
+    public Project()
+    {
+        
+    }
     public Project(Account owner)
     {
         Owner = owner;
@@ -18,9 +22,10 @@ public class Project : Entity, IAuditableEntity, IAccountOwned
     public string? Name { get; set; }
     
     // Collection
-    public ICollection<BaseProperty> Properties { get; set; } = [];
+    public ICollection<Property> Properties { get; set; } = [];
+    public ICollection<ProjectInstallmentPlan>? PaymentPlans { get; set; }
     
     // Relationship
     public Account? Owner { get; set; }
-    public Ulid? OwnerId { get; set; }
+    public Ulid OwnerId { get; set; }
 }

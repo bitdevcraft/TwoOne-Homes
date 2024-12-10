@@ -15,5 +15,5 @@ public class PaymentPlanMilestoneFee : Entity, IAuditableEntity
     
     // Relationship
     public PaymentPlanMilestone? Milestone { get; set; }
-    public Ulid? MilestoneId { get; set; }
+    public Ulid MilestoneId { get; set; }
 }

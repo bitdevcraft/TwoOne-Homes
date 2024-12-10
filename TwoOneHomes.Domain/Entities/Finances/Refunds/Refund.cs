@@ -6,6 +6,10 @@ namespace TwoOneHomes.Domain.Entities.Finances.Refunds;
 
 public class Refund : Entity, IAuditableEntity
 {
+    public Refund()
+    {
+        
+    }
     public Refund(Transaction transaction)
     {
         Transaction = transaction;
@@ -19,6 +23,6 @@ public class Refund : Entity, IAuditableEntity
     public string? StripeRefundId { get; set; }
     // Relationship
 
-    public Transaction Transaction { get; set; }
+    public Transaction? Transaction { get; set; }
     public Ulid TransactionId { get; set; }
 }

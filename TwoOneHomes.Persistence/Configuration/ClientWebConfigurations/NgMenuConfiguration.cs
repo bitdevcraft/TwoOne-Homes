@@ -22,6 +22,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000FPSYZH3GPW5MSXK9"),
                 Label = "Sales",
                 Icon = "pi pi-fw pi-wallet",
                 ParentId = null,
@@ -29,6 +30,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000775C83ZMHS46KZB9"),
                 Label = "Setup",
                 Icon = "pi pi-fw pi-cog",
                 ParentId = null,
@@ -44,6 +46,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("000000000065ET5P858WE44ESH"),
                 Label = "Leads",
                 Icon = "pi pi-fw pi-id-card",
                 ParentId = menus[0].Id,
@@ -51,6 +54,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000TMSKXZG0TQS8KH4E"),
                 Label = "Contacts",
                 Icon = "pi pi-fw pi-address-book",
                 ParentId = menus[0].Id,
@@ -58,6 +62,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("00000000008CPGH1XH0C8H43XB"),
                 Label = "Accounts",
                 Icon = "pi pi-fw pi-building",
                 ParentId = menus[0].Id,
@@ -65,6 +70,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("00000000009XWDPJSQF96B4NP7"),
                 Label = "Opportunities",
                 Icon = "pi pi-fw pi-bookmark",
                 ParentId = menus[0].Id,
@@ -79,6 +85,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("000000000010A44W9QKCDF8R01"),
                 Label = "New Lead",
                 Icon = "pi pi-fw pi-plus",
                 RouterLinkArray = "/r/Leads/new",
@@ -87,6 +94,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("000000000029GN3AW98KG9NSW0"),
                 Label = "List View",
                 Icon = "pi pi-fw pi-list",
                 RouterLinkArray = "/r/Leads/list-view",
@@ -102,6 +110,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000B9VEPEMT33QKH8GJ"),
                 Label = "New Contact",
                 Icon = "pi pi-fw pi-plus",
                 RouterLinkArray = "/r/Contacts/new",
@@ -110,6 +119,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000BY6K569JMAXKBFQ4"),
                 Label = "List View",
                 Icon = "pi pi-fw pi-list",
                 RouterLinkArray = "/r/Contacts/list-view",
@@ -125,6 +135,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000AA85C44J7Z6EHSK9"),
                 Label = "New Account",
                 Icon = "pi pi-fw pi-plus",
                 RouterLinkArray = "/r/Accounts/new",
@@ -133,6 +144,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000ZZZNEZFA5KW8VQ49"),
                 Label = "List View",
                 Icon = "pi pi-fw pi-list",
                 RouterLinkArray = "/r/Accounts/list-view",
@@ -148,6 +160,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000DB9RAE6NFQ7D947H"),
                 Label = "New Opportunity",
                 Icon = "pi pi-fw pi-plus",
                 RouterLinkArray = "/r/Opportunities/new",
@@ -156,6 +169,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("00000000007TXYNB9SCDNX2PBW"),
                 Label = "List View",
                 Icon = "pi pi-fw pi-list",
                 RouterLinkArray = "/r/Opportunities/list-view",
@@ -171,6 +185,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("00000000006D8TXH0VSKS8A16T"),
                 Label = "Administrations",
                 Icon = "pi pi-fw pi-users",
                 ParentId = menus[1].Id,
@@ -179,6 +194,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000RS4BRNHEH542PJ7C"),
                 Label = "Settings",
                 Icon = "pi pi-fw pi-wrench",
                 ParentId = menus[1].Id,
@@ -193,6 +209,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000E1X6ZFQH12PK4K79"),
                 Label = "Permissions",
                 Icon = "pi pi-fw",
                 ParentId = setup[0].Id,
@@ -202,6 +219,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000KZS5Z9FTHRW81DB8"),
                 Label = "Roles",
                 Icon = "pi pi-fw ",
                 ParentId = setup[0].Id,
@@ -211,6 +229,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             },
             new NgMenu
             {
+                Id = Ulid.Parse("000000000091AF12TDAYDRJWWX"),
                 Label = "Users",
                 Icon = "pi pi-fw ",
                 ParentId = setup[0].Id,
@@ -226,6 +245,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
         {
             new NgMenu
             {
+                Id = Ulid.Parse("000000000091VTD5TYNF1KWWPW"),
                 Label = "Menu Settings",
                 Icon = "pi pi-fw",
                 ParentId = setup[1].Id,

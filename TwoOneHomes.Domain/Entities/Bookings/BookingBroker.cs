@@ -5,6 +5,10 @@ namespace TwoOneHomes.Domain.Entities.Bookings;
 
 public class BookingBroker : Entity
 {
+    public BookingBroker()
+    {
+        
+    }
     public BookingBroker(Account account, Booking booking)
     {
         Account = account;
@@ -13,9 +17,9 @@ public class BookingBroker : Entity
         BookingId = booking.Id;
     }
 
-    public Account Account { get; set; }
+    public Account? Account { get; set; }
     public Ulid AccountId { get; set; }
-    public Booking Booking { get; set; }
+    public Booking? Booking { get; set; }
     public Ulid BookingId { get; set; }
     public bool MainOwner { get; set; }
 }

@@ -31,9 +31,10 @@ public class PaymentPlanMilestone : Entity, IAuditableEntity, IAccountOwned
     public ICollection<PaymentPlanMilestoneFee> MilestoneFees { get; set; } = [];
     
     // Relationship
-    public PaymentPlan? ParentPlan { get; set; }
+    public PaymentPlan? PaymentPlan { get; set; }
+    public Ulid PaymentPlanId { get; set; }
     public Account? Owner { get; set; }
-    public Ulid? OwnerId { get; set; }
+    public Ulid OwnerId { get; set; }
     
     
 }

@@ -1,5 +1,7 @@
+using System.ComponentModel.DataAnnotations;
 using TwoOneHomes.Domain.Entities.Accounts;
 using TwoOneHomes.Domain.Entities.Bookings.Enums;
+using TwoOneHomes.Domain.Entities.Finances.Commissions;
 using TwoOneHomes.Domain.Entities.Inventories.Properties;
 using TwoOneHomes.Domain.Entities.Inventories.Properties.Enums;
 using TwoOneHomes.Domain.Primitives;
@@ -8,6 +10,10 @@ namespace TwoOneHomes.Domain.Entities.Bookings;
 
 public class Booking : Entity, IAuditableEntity, IAccountOwned
 {
+    public Booking()
+    {
+        
+    }
     public Booking(Property property)
     {
         Property = property;
@@ -18,6 +24,7 @@ public class Booking : Entity, IAuditableEntity, IAccountOwned
     public DateTime CreatedOnUtc { get; set; }
     public DateTime? ModifiedOnUtc { get; set; }
 
+    [MaxLength(255)]
     public string? Name { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
@@ -43,14 +50,15 @@ public class Booking : Entity, IAuditableEntity, IAccountOwned
         };
 
 
-    public Ulid? MainCustomerId { get; set; }
+    public Ulid MainCustomerId { get; set; }
     public ICollection<BookingCustomer> Customers { get; set; } = [];
     public ICollection<Account> Brokers { get; set; } = [];
+    public ICollection<Commission> Commissions { get; set; } = [];
     
     // Relationship
+    public Property? Property { get; set; }
     public Ulid PropertyId { get; set; }
-    public Property Property { get; set; }
 
     public Account? Owner { get; set; }
-    public Ulid? OwnerId { get; set; }
+    public Ulid OwnerId { get; set; }
 }

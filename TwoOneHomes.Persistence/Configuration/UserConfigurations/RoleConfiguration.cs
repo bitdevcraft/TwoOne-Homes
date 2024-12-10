@@ -27,18 +27,28 @@ internal class RoleConfiguration : IEntityTypeConfiguration<Role>
             .IsRequired();
 
         // Default Roles
-        var defaultRoleNames = new List<string>
+        var roles = new List<Role>
         {
-            RoleNames.SystemAdministrator,
-            RoleNames.Administrator,
-            RoleNames.User
+            new Role
+            {
+                Id = Ulid.Parse("00000000000000000000000001"),
+                Name = RoleNames.SystemAdministrator,
+                NormalizedName = RoleNames.SystemAdministrator.ToUpperInvariant(),
+            },
+            new Role
+            {
+                Id = Ulid.Parse("00000000000000000000000002"),
+                Name = RoleNames.Administrator,
+                NormalizedName = RoleNames.Administrator.ToUpperInvariant(),
+            },
+            new Role
+            {
+                Id = Ulid.Parse("00000000000000000000000003"),
+                Name = RoleNames.User,
+                NormalizedName = RoleNames.User.ToUpperInvariant(),
+            },
         };
-
-        var roles = new List<Role>();
-        foreach (string item in defaultRoleNames)
-        {
-            roles.Add(new Role(item) { NormalizedName = item.ToUpperInvariant() });
-        }
+      
 
         //Seed Default Roles Data
         builder.HasData(roles);

@@ -26,10 +26,11 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
             .WithOne(e => e.User)
             .HasForeignKey(ur => ur.UserId)
             .IsRequired();
-
-        builder.HasOne(e => e.Account)
-            .WithMany(e => e.Employees)
-            .HasForeignKey(e => e.AccountId);
+        
+        // builder.HasOne(e => e.Account)
+        //     .WithMany(e => e.Employees)
+        //     .HasForeignKey(e => e.AccountId)
+        //     .IsRequired(false);
 
         // Self-Referencing
         builder.HasOne(x => x.Manager)

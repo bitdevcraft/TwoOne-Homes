@@ -10,6 +10,10 @@ namespace TwoOneHomes.Domain.Entities.Inventories.Properties;
 
 public class BaseProperty : Entity, IAuditableEntity, IAccountOwned
 {
+    public BaseProperty()
+    {
+        
+    }
     public BaseProperty(Account account)
     {
         Owner = account;
@@ -38,10 +42,10 @@ public class BaseProperty : Entity, IAuditableEntity, IAccountOwned
 
     // Relationship
     public Account? Owner { get; set; }
-    public Ulid? OwnerId { get; set; }
+    public Ulid OwnerId { get; set; }
 
     public Project? Project { get; set; }
-    public Ulid? ProjectId { get; set; }
+    public Ulid ProjectId { get; set; }
     
     // Collection
     public ICollection<Booking> Bookings { get; set; } = [];

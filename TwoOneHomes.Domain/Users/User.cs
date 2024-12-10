@@ -20,7 +20,7 @@ public class User : IdentityUser<Ulid>
     public virtual ICollection<UserActivity> UserActivities { get; set; } = [];
 
     public User? Manager { get; set; }
-    public Ulid? ManagerId { get; set; }
+    public Ulid ManagerId { get; set; }
     public ICollection<User>? Members { get; set; }
 
     public string FullName => 
@@ -40,5 +40,4 @@ public class User : IdentityUser<Ulid>
 
     // Relationship
     public Account? Account { get; set; }
-    public Ulid? AccountId { get; set; }
 }
