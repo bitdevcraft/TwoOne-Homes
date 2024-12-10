@@ -10,7 +10,7 @@ internal class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        builder.ToTable(TableNames.SysRoles);
+        builder.ToTable("Roles", "core");
 
         // Each User can have many entries in the UserRole join table
         builder

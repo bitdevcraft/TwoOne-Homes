@@ -9,7 +9,7 @@ internal class PermissionConfiguration : IEntityTypeConfiguration<Permission>
 {
     public void Configure(EntityTypeBuilder<Permission> builder)
     {
-        builder.ToTable(TableNames.SysPermissions);
+        builder.ToTable("Permissions", "core");
 
         // Primary key
         builder.HasKey(r => r.Id);

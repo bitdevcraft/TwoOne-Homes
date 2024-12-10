@@ -27,5 +27,5 @@ public class Project : Entity, IAuditableEntity, IAccountOwned
     
     // Relationship
     public Account? Owner { get; set; }
-    public Ulid OwnerId { get; set; }
+    public Ulid? OwnerId { get; set; }
 }

@@ -9,6 +9,7 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
     public void Configure(EntityTypeBuilder<Account> builder)
     {
         builder.ToTable("Accounts");
+        
         builder.HasKey(x => x.Id);
         
         // Self-Referencing
@@ -20,5 +21,7 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
 
         builder.HasMany(x => x.Employees)
             .WithOne(x => x.Account);
+        
+        
     }
 }

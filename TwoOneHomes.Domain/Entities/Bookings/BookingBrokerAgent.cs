@@ -17,7 +17,7 @@ public class BookingBrokerAgent : Entity
         UserId = user.Id;
     }
     public BookingBroker? BookingBroker { get; set; }
-    public Ulid BookingBrokerId { get; set; }
+    public Ulid? BookingBrokerId { get; set; }
     public User? User { get; set; }
-    public Ulid UserId { get; set; }
+    public Ulid? UserId { get; set; }
 }

@@ -9,7 +9,7 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable(TableNames.SysUsers);
+        builder.ToTable("Users", "core");
 
         // Each User can have many entries in the UserRole join table
         builder.HasMany(e => e.UserRoles)

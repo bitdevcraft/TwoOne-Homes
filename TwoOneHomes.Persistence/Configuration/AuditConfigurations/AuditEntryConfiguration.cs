@@ -9,7 +9,7 @@ internal sealed class AuditEntryConfiguration : IEntityTypeConfiguration<AuditEn
 {
     public void Configure(EntityTypeBuilder<AuditEntry> builder)
     {
-        builder.ToTable(TableNames.SysAuditEntries);
+        builder.ToTable("AuditEntries", "core");
 
         builder.HasKey(x => x.Id);
     }

@@ -15,6 +15,6 @@ public class UserDto
     public string? Email { get; set; }
     public string? Role { get; set; }
     public string? Manager { get; set; }
-    public Ulid ManagerId { get; set; }
-    public Ulid RoleId { get; set; }
+    public Ulid? ManagerId { get; set; }
+    public Ulid? RoleId { get; set; }
 }

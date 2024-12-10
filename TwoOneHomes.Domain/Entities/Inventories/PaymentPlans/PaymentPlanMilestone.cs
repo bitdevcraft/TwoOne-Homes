@@ -32,9 +32,9 @@ public class PaymentPlanMilestone : Entity, IAuditableEntity, IAccountOwned
     
     // Relationship
     public PaymentPlan? PaymentPlan { get; set; }
-    public Ulid PaymentPlanId { get; set; }
+    public Ulid? PaymentPlanId { get; set; }
     public Account? Owner { get; set; }
-    public Ulid OwnerId { get; set; }
+    public Ulid? OwnerId { get; set; }
     
     
 }

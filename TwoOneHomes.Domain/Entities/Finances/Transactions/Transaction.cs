@@ -35,8 +35,8 @@ public class Transaction : Entity, IAuditableEntity
 
     // Relationship
     public PaymentIntent? PaymentIntent { get; set; }
-    public Ulid PaymentIntentId { get; set; }
+    public Ulid? PaymentIntentId { get; set; }
 
     public User? User { get; set; }
-    public Ulid UserId { get; set; }
+    public Ulid? UserId { get; set; }
 }

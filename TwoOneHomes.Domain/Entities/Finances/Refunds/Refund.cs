@@ -24,5 +24,5 @@ public class Refund : Entity, IAuditableEntity
     // Relationship
 
     public Transaction? Transaction { get; set; }
-    public Ulid TransactionId { get; set; }
+    public Ulid? TransactionId { get; set; }
 }

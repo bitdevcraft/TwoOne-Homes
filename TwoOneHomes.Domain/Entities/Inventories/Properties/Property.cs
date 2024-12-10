@@ -68,7 +68,7 @@ public class Property : BaseProperty
     }
     
     public PaymentPlan? PaymentPlan { get; set; }
-    public Ulid PaymentPlanId { get; set; }
+    public Ulid? PaymentPlanId { get; set; }
     
     // Category-Rental
     public decimal RentalPrice { get; set; }

@@ -9,7 +9,7 @@ internal sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<Refre
 {
     public void Configure(EntityTypeBuilder<RefreshToken> builder)
     {
-        builder.ToTable(TableNames.SysRefreshTokens);
+        builder.ToTable("RefreshTokens", "core");
 
         builder.HasKey(x => x.Id);
 

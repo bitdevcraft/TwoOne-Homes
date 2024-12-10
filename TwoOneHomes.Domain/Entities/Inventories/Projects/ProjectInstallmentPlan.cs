@@ -18,8 +18,8 @@ public class ProjectInstallmentPlan
 
     public Ulid Id { get; private init; } = Ulid.NewUlid();
     public Project? Project { get; set; }
-    public Ulid ProjectId { get; set; }
+    public Ulid? ProjectId { get; set; }
     public PaymentPlan? PaymentPlan { get; set; }
-    public Ulid PaymentPlanId { get; set; }
+    public Ulid? PaymentPlanId { get; set; }
     
 }

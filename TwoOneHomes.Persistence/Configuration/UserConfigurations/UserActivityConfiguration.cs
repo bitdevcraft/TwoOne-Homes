@@ -11,6 +11,6 @@ public class UserActivityConfiguration : IEntityTypeConfiguration<UserActivity>
     {
         builder.HasKey(x => x.Id);
 
-        builder.ToTable(TableNames.SysUserActivities);
+        builder.ToTable("UserActivities", "core");
     }
 }

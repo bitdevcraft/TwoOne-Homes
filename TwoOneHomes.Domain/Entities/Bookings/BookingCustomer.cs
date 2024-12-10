@@ -21,9 +21,9 @@ public class BookingCustomer : Entity, IAuditableEntity
     }
 
     public User? User { get; set; }
-    public Ulid UserId { get; set; }
+    public Ulid? UserId { get; set; }
     public Booking? Booking { get; set; }
-    public Ulid BookingId { get; set; }
+    public Ulid? BookingId { get; set; }
     public bool MainOwner { get; set; }
 
 }

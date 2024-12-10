@@ -50,15 +50,15 @@ public class Booking : Entity, IAuditableEntity, IAccountOwned
         };
 
 
-    public Ulid MainCustomerId { get; set; }
+    public Ulid? MainCustomerId { get; set; }
     public ICollection<BookingCustomer> Customers { get; set; } = [];
     public ICollection<Account> Brokers { get; set; } = [];
     public ICollection<Commission> Commissions { get; set; } = [];
     
     // Relationship
     public Property? Property { get; set; }
-    public Ulid PropertyId { get; set; }
+    public Ulid? PropertyId { get; set; }
 
     public Account? Owner { get; set; }
-    public Ulid OwnerId { get; set; }
+    public Ulid? OwnerId { get; set; }
 }

@@ -5,5 +5,5 @@ namespace TwoOneHomes.Domain.Primitives;
 public interface IAccountOwned
 {
     public Account? Owner { get; set; }
-    public Ulid OwnerId { get; set; }
+    public Ulid? OwnerId { get; set; }
 }

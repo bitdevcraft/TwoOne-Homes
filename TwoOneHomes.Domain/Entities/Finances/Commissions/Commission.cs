@@ -43,9 +43,9 @@ public class Commission : Entity, IAuditableEntity
     
     // Relationship
     public Booking? Booking { get; set; }
-    public Ulid BookingId { get; set; }
+    public Ulid? BookingId { get; set; }
 
     public Account? Broker { get; set; }
-    public Ulid BrokerId { get; set; }
+    public Ulid? BrokerId { get; set; }
     
 }

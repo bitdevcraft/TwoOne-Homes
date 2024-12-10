@@ -31,8 +31,8 @@ public class PaymentIntent : Entity, IAuditableEntity
 
     // Relationship
     public User? User { get; set; }
-    public Ulid UserId { get; set; }
+    public Ulid? UserId { get; set; }
 
     public Booking? Booking { get; set; }
-    public Ulid BookingId { get; set; }
+    public Ulid? BookingId { get; set; }
 }

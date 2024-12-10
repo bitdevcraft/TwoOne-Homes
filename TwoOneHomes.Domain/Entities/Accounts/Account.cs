@@ -31,5 +31,5 @@ public class Account : Entity, IAuditableEntity
     // Relationship
     public User? Owner { get; set; }
     public Account? ParentAccount { get; set; }
-    public Ulid ParentAccountId { get; set; }
+    public Ulid? ParentAccountId { get; set; }
 }

@@ -18,8 +18,8 @@ public class BookingBroker : Entity
     }
 
     public Account? Account { get; set; }
-    public Ulid AccountId { get; set; }
+    public Ulid? AccountId { get; set; }
     public Booking? Booking { get; set; }
-    public Ulid BookingId { get; set; }
+    public Ulid? BookingId { get; set; }
     public bool MainOwner { get; set; }
 }

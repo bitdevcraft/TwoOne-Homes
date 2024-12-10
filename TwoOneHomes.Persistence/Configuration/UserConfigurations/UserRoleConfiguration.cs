@@ -8,5 +8,5 @@ namespace TwoOneHomes.Persistence.Configuration.UserConfigurations;
 internal class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
 {
     public void Configure(EntityTypeBuilder<UserRole> builder) =>
-        builder.ToTable(TableNames.SysUserRoles);
+        builder.ToTable("UserRoles", "core");
 }

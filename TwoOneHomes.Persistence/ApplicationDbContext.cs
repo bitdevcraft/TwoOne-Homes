@@ -25,7 +25,9 @@ public sealed class ApplicationDbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.HasDefaultSchema("management");
         base.OnModelCreating(builder);
+        
         builder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
     }
 

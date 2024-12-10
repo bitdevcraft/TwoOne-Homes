@@ -9,7 +9,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
 {
     public void Configure(EntityTypeBuilder<NgMenu> builder)
     {
-        builder.ToTable(TableNames.NgMenus);
+        builder.ToTable("Menus", "web");
         builder.HasKey(x => x.Id);
         builder.HasOne(x => x.Parent)
             .WithMany(x => x.Items)

@@ -9,7 +9,7 @@ internal class RolePermissionConfiguration : IEntityTypeConfiguration<RolePermis
 {
     public void Configure(EntityTypeBuilder<RolePermission> builder)
     {
-        builder.ToTable(TableNames.SysRolePermissions);
+        builder.ToTable("RolePermissions", "core");
 
         builder.HasKey(rolePermission => new
         {

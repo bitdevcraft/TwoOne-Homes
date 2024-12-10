@@ -9,7 +9,7 @@ public class NgFormLayoutConfiguration : IEntityTypeConfiguration<NgFormLayout>
 {
     public void Configure(EntityTypeBuilder<NgFormLayout> builder)
     {
-        builder.ToTable(TableNames.NgFormLayouts);
+        builder.ToTable("FormLayouts", "web");
         builder.HasKey(x => x.Id);
     }
 }
