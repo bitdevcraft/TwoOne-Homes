@@ -1,6 +1,6 @@
 ﻿using TwoOneHomes.Domain.Users.Permissions;
 
-namespace TwoOneHomes.Domain.Repositories;
+namespace TwoOneHomes.Domain.Repositories.Identities;
 
 public interface IPermissionRepository
 {

@@ -24,22 +24,226 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
             {
                 Id = Ulid.Parse("0000000000FPSYZH3GPW5MSXK9"),
                 Label = "Sales",
-                Icon = "pi pi-fw pi-wallet",
+                Icon = "pi pi-fw",
                 ParentId = null,
                 Hierarchy = 0
             },
             new NgMenu
             {
+                Id = Ulid.Parse("0000000000HEJQ7G0X4875BX5W"),
+                Label = "Inventory",
+                Icon = "pi pi-fw",
+                ParentId = null,
+                Hierarchy = 1
+            },
+            new NgMenu
+            {
                 Id = Ulid.Parse("0000000000775C83ZMHS46KZB9"),
                 Label = "Setup",
-                Icon = "pi pi-fw pi-cog",
+                Icon = "pi pi-fw ",
                 ParentId = null,
-                Hierarchy = 1,
+                Hierarchy = 4,
+                CanDelete = false,
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000RYZQVQKZQSR3Y36G"),
+                Label = "Profile",
+                Icon = "pi pi-fw ",
+                ParentId = null,
+                Hierarchy = 3,
+                CanDelete = false,
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000198QVPQ7XV89MJWX"),
+                Label = "Finance",
+                Icon = "pi pi-fw ",
+                ParentId = null,
+                Hierarchy = 2,
                 CanDelete = false,
             },
         };
 
         builder.HasData(menus);
+
+        var finances = new List<NgMenu>
+        {   
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000WDW20YJNFXE2DTVQ"),
+                Label = "Payments",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[4].Id,
+                Hierarchy = 0
+            }, 
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000CXAWCP89EXGPKECJ"),
+                Label = "Transactions",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[4].Id,
+                Hierarchy = 1
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("000000000055S8J73XT725Z2CA"),
+                Label = "Refunds",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[4].Id,
+                Hierarchy = 2
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("000000000088SB0BQ7Z6H7TWG8"),
+                Label = "Commissions",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[4].Id,
+                Hierarchy = 3
+            },
+        };
+
+        builder.HasData(finances);
+        
+        
+        
+        
+        var profiles = new List<NgMenu>
+        {
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000N5BT29EYSWKMC4QF"),
+                Label = "My Profile",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[3].Id,
+                RouterLinkArray = "/user/account",
+                Hierarchy = 0
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("00000000007D7QD668G6XAWGJE"),
+                Label = "Account",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[3].Id,
+                RouterLinkArray = "/user/account",
+                Hierarchy = 1
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("00000000000MX84X20254R1SWM"),
+                Label = "Password & Security",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[3].Id,
+                Hierarchy = 2
+            },
+        };
+
+        builder.HasData(profiles);
+
+
+
+        var inventories = new List<NgMenu>
+        {
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000QYCVEFG11KHT3GZE"),
+                Label = "Projects",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[1].Id,
+                Hierarchy = 0
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000NJ1W4RE1R0D30K5Y"),
+                Label = "Properties",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[1].Id,
+                Hierarchy = 1
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("00000000005WS823HSNADT1DRY"),
+                Label = "PaymentPlans",
+                Icon = "pi pi-fw pi-id-card",
+                ParentId = menus[1].Id,
+                Hierarchy = 2
+            },
+        };
+
+        builder.HasData(inventories);
+
+
+        var projects = new List<NgMenu>
+        {
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000ZCNPNPHRC1X9J29F"),
+                Label = "New Lead",
+                Icon = "pi pi-fw pi-plus",
+                RouterLinkArray = "/r/Projects/new",
+                ParentId = inventories[0].Id,
+                Hierarchy = 0
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000EPAPEKGQS5XMA8KF"),
+                Label = "List View",
+                Icon = "pi pi-fw pi-list",
+                RouterLinkArray = "/r/Projects/list-view",
+                ParentId = inventories[0].Id,
+                Hierarchy = 1
+            },
+        };
+        
+        builder.HasData(projects);
+        
+        var properties = new List<NgMenu>
+        {
+            new NgMenu
+            {
+                Id = Ulid.Parse("000000000010DW8BRZ9763YHKX"),
+                Label = "New Lead",
+                Icon = "pi pi-fw pi-plus",
+                RouterLinkArray = "/r/Properties/new",
+                ParentId = inventories[1].Id,
+                Hierarchy = 0
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000AE87ZDXB60RME616"),
+                Label = "List View",
+                Icon = "pi pi-fw pi-list",
+                RouterLinkArray = "/r/Properties/list-view",
+                ParentId = inventories[1].Id,
+                Hierarchy = 1
+            },
+        };
+        
+        builder.HasData(properties);
+        
+        var paymentPlans = new List<NgMenu>
+        {
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000XK6SBCD6BK2N2B5Y"),
+                Label = "New Lead",
+                Icon = "pi pi-fw pi-plus",
+                RouterLinkArray = "/r/PaymentPlans/new",
+                ParentId = inventories[1].Id,
+                Hierarchy = 0
+            },
+            new NgMenu
+            {
+                Id = Ulid.Parse("0000000000TTQABZX4E19BPT4M"),
+                Label = "List View",
+                Icon = "pi pi-fw pi-list",
+                RouterLinkArray = "/r/PaymentPlans/list-view",
+                ParentId = inventories[1].Id,
+                Hierarchy = 1
+            },
+        };
+        
+        builder.HasData(paymentPlans);
 
 
         var sales = new List<NgMenu>
@@ -188,7 +392,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
                 Id = Ulid.Parse("00000000006D8TXH0VSKS8A16T"),
                 Label = "Administrations",
                 Icon = "pi pi-fw pi-users",
-                ParentId = menus[1].Id,
+                ParentId = menus[2].Id,
                 Hierarchy = 0,
                 CanDelete = false,
             },
@@ -197,7 +401,7 @@ public class NgMenuConfiguration : IEntityTypeConfiguration<NgMenu>
                 Id = Ulid.Parse("0000000000RS4BRNHEH542PJ7C"),
                 Label = "Settings",
                 Icon = "pi pi-fw pi-wrench",
-                ParentId = menus[1].Id,
+                ParentId = menus[2].Id,
                 Hierarchy = 1,
                 CanDelete = false,
             },

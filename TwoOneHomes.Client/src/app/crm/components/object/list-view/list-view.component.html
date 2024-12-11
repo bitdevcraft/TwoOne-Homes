@@ -1,5 +1,5 @@
 <div class="grid">
-  <div class="col-12">
+  <div class="w-full pt-3">
     <div class="card">
       <h5><strong>{{ objectName }}</strong></h5>
 
@@ -21,15 +21,15 @@
         responsiveLayout="scroll"
       >
         <ng-template pTemplate="caption">
-          <div class="flex justify-content-between flex-column sm:flex-row">
+          <div class="flex justify-content-between flex-column sm:flex-row listview-header-btn">
             <button
               pButton
               label="Clear"
-              class="p-button-outlined mb-2"
+              class="p-button-outlined mb-2 listview-clear-btn"
               icon="pi pi-filter-slash"
               (click)="clear(dt1)"
             ></button>
-            <span class="p-input-icon-left mb-2">
+            <span class="p-input-icon-left mb-2 listview-search-btn">
               <i class="pi pi-search"></i>
               <input
                 pInputText

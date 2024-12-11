@@ -1,6 +1,6 @@
 using TwoOneHomes.Domain.Users.Tokens;
 
-namespace TwoOneHomes.Domain.Repositories;
+namespace TwoOneHomes.Domain.Repositories.Identities;
 
 public interface IRefreshTokenRepository
 {

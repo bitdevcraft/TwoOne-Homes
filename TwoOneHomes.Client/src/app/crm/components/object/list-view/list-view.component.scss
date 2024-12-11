@@ -1,0 +1,11 @@
+@media (max-width: 991px) {
+  .listview-header-btn{
+    .listview-clear-btn{
+      order: 2;
+    }
+
+    .listview-search-btn{
+      order: 1;
+    }
+  }
+}

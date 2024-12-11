@@ -1,6 +1,6 @@
 using AutoMapper;
 using TwoOneHomes.Application.Abstraction.Messaging;
-using TwoOneHomes.Domain.Repositories;
+using TwoOneHomes.Domain.Repositories.Identities;
 using TwoOneHomes.Domain.Shared.Results;
 using TwoOneHomes.Domain.Users;
 

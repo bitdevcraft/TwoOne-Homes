@@ -1,8 +1,9 @@
 using TwoOneHomes.Domain.Entities.Inventories.PaymentPlans;
+using TwoOneHomes.Domain.Primitives;
 
 namespace TwoOneHomes.Domain.Entities.Inventories.Projects;
 
-public class ProjectInstallmentPlan 
+public class ProjectInstallmentPlan : Entity
 {
     public ProjectInstallmentPlan()
     {
@@ -15,8 +16,6 @@ public class ProjectInstallmentPlan
         PaymentPlan = plan;
         PaymentPlanId = plan.Id;
     }
-
-    public Ulid Id { get; private init; } = Ulid.NewUlid();
     public Project? Project { get; set; }
     public Ulid? ProjectId { get; set; }
     public PaymentPlan? PaymentPlan { get; set; }
